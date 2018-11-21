@@ -1,0 +1,149 @@
+﻿body {
+	background-image: url(../assets/background.png);
+	font-family: "Microsoft Yahei", Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	font-size: 16px;
+}
+
+.main-form {
+	position: fixed;
+	width: 440px;
+	height: 440px;
+	top: 50%;
+	left: 50%;
+	margin-top: -240px;
+	margin-left: -240px;
+	background-color: rgba(255,255,255,0.8);
+	padding: 40px;
+}
+
+.single-item {
+	margin-top: 0.75em;
+	margin-bottom: 0.75em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 350px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+.user-info span {
+	font-family: "Source Code Pro", Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace", sans-serif;
+	font-size: 18px;
+	width: 300px;
+	background-color: transparent;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: solid;
+	border-bottom-color: gray;
+	border-bottom-width: thin;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+	border-bottom-color: black;
+}
+
+input[type="text"]:disabled,
+input[type="tel"]:disabled,
+input[type="email"]:disabled,
+input[type="password"]:disabled {
+	border-bottom-color: rgba(180,180,180,1.00);
+	color: rgba(180,180,180,1.00);
+}
+
+input[type="submit"] {
+	display: block;
+	width: 120px;
+	height: 40px;
+	background-color: white;
+	border-style: none;
+	font-size: 16px;
+	box-shadow: 0 0 10px 2px rgba(128, 128, 128, 0.5);
+	margin: 10px auto auto auto;
+}
+
+input[type="submit"]:hover {
+	box-shadow: 0 0 50px 10px rgba(128, 128, 128, 0.5);
+}
+
+input[type="submit"]:active {
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	background-color: black;
+	color: white;
+}
+
+input[type="reset"], .navigate-register {
+	color: rgba(0, 103, 184, 1.00);
+	width: 50px;
+	height: 20px;
+	background-color: transparent;
+	border-style: none;
+	margin-top: 2em;
+	margin-left: 0px;
+	margin-right: auto;
+	display: inline;
+}
+
+input[type="reset"]:hover, .navigate-register:hover {
+	color: deepskyblue;
+}
+
+input[type="reset"]:active, .navigate-register:active {
+	color: black;
+}
+
+input[type="reset"]:disabled, .navigate-register:disabled {
+	color: rgba(180,180,180,1.00);
+}
+
+.navigate-register {
+	float: right;
+}
+
+.status-text {
+	color: indianred;
+	position: absolute;
+	bottom: 2em;
+	left: 50%;
+	margin-left: -50%;
+	width: 100%;
+	text-align: center;
+}
+
+.user-info {
+	margin-top: 100px;
+	width: 440px;
+	height: 130px;
+}
+
+#register-form .invalid,
+#login-form .invalid {
+	border-bottom-color: red;
+}
+
+#register-form {
+	position: absolute;
+	width: 440px;
+	height: 310px;
+	top: 50%;
+	margin-top: -155px;
+}
+
+#login-form {
+	position: absolute;
+	width: 440px;
+	height: 120px;
+	top: 50%;
+	margin-top: -60px;
+}
+
+#logout {
+	position: absolute;
+	top: 0;
+	right: 2em;
+}

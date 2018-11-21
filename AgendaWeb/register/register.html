@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title>注册</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.bootcss.com/lodash.js/4.17.11/lodash.min.js"></script>
+    <script src="/index.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/index.css" />
+</head>
+<body>
+    <div class="main-form">
+        <form id="login-form" method="post" action="/user" hidden>
+            <div class="single-item">
+                账户：<input id="name" type="text" />
+            </div>
+            <div class="single-item">
+                密码：<input id="password" type="password" value="123456" disabled="disabled" />
+            </div>
+            <div>
+                <input id="find-password" type="reset" value="找回" disabled="disabled" />
+                <button id="go-register" class="navigate-register">注册</button>
+            </div>
+            <input type="submit" value="登录" />
+        </form>
+        <form id="register-form" method="post" action="/register">
+            <div class="single-item">
+                名称：<input id="reg-name" type="text" pattern="[A-Za-z][A-Za-z0-9_]{5,17}" title="6~18位英文字母、数字或下划线，以字母开头" />
+            </div>
+            <div class="single-item">
+                密码：<input id="reg-password" type="password" value="123456" disabled="disabled" />
+            </div>
+            <div class="single-item">
+                学号：<input id="reg-id" type="text" pattern="[1-9][0-9]{7}" title="8位数字，以1~9开头" />
+            </div>
+            <div class="single-item">
+                电话：<input id="reg-phone" type="tel" pattern="[1-9][0-9]{10}" title="11位数字，以1~9开头" />
+            </div>
+            <div class="single-item">
+                邮箱：<input id="reg-email" type="email" />
+            </div>
+            <div>
+                <input id="reg-reset" type="reset" value="清空" />
+                <button id="go-login" class="navigate-register">登录</button>
+            </div>
+            <input type="submit" value="注册" />
+        </form>
+        <div class="user-info" hidden>
+            <button id="logout" class="navigate-register">退出</button>
+            <div class="single-item">
+                用户名：<span id="user-name">{name}</span>
+            </div>
+            <div class="single-item">
+                学号：<span id="user-id">{id}</span>
+            </div>
+            <div class="single-item">
+                电话：<span id="user-phone">{phone}</span>
+            </div>
+            <div class="single-item">
+                邮箱：<span id="user-email">{email}</span>
+            </div>
+        </div>
+        <div id="status" class="status-text"></div>
+    </div>
+</body>
+</html>
