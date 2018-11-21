@@ -1,0 +1,9 @@
+{
+  "name": "agenda-web",
+  "version": "0.0.0",
+  "description": "AgendaWeb",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}
