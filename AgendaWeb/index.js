@@ -42,7 +42,7 @@ function sendLoginData() {
                 document.title = user.name;
                 history.pushState(history.state, user.name, "/?username=" + user.name);
                 $("#status").text("");
-                $("#login-form").fadeOut(0.5, function () {
+                $("#login-form").fadeOut(100, function () {
                     showUserInfo();
                 });
             } else {
@@ -62,7 +62,7 @@ function sendRegisterData() {
 		if (req.readyState === 4) {
             if (req.status === 200) {
                 $("#status").text("");
-                $("#register-form").fadeOut(0.5, function () {
+                $("#register-form").fadeOut(100, function () {
                     user = JSON.parse(req.responseText);
                     document.title = user.name;
                     history.pushState(history.state, user.name, "/?username=" + user.name);
