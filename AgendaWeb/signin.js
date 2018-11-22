@@ -3,7 +3,7 @@ var http = require('http');
 var fs = require('fs');
 var url = require('url');
 var querystring = require('querystring');
-var port = process.env.PORT || 1337;
+var port = process.env.PORT || 8000;
 
 var storage = {
     "readFromFile": function () {

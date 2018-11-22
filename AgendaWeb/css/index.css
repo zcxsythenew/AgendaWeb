@@ -124,6 +124,7 @@ input[type="reset"]:disabled, .navigate-register:disabled {
 #register-form .invalid,
 #login-form .invalid {
 	border-bottom-color: red;
+    background-color: lightpink;
 }
 
 #register-form {
