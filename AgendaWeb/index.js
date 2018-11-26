@@ -113,11 +113,10 @@ function checkData(login) {
 		if (!$("#reg-phone").val().match(/[1-9][0-9]{10}/)) {
 			status = false;
 			$("#reg-phone").addClass("invalid");
-		}
-		if ($("#reg-email").val() === "") {
+        }
+        if ($("#reg-email").val().match(/^[a-zA-Z_\-]+@(([a-zA-Z_\-])+\.)+[a-zA-Z]{2,4}$/)) {
 			status = false;
 			$("#reg-email").addClass("invalid");
-			/* 由浏览器完成邮箱格式判断（偷懒） */
 		}
 		if (!status) {
 			$("#status").text("划红线的项目必填，请按格式填写");

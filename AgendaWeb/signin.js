@@ -79,25 +79,25 @@ function registerUser(user) {
             phone: false,
             email: false
         };
-        if (storage.queryUser((usr) => {
+        if (!user.name.match(/[A-Za-z][A-Za-z0-9_]{5,17}/) || storage.queryUser((usr) => {
             return usr.name === user.name;
         }).length !== 0) {
             err.name = true;
             status = false;
         }
-        if (storage.queryUser((usr) => {
+        if (!user.id.match(/[1-9][0-9]{7}/) ||  storage.queryUser((usr) => {
             return usr.id === user.id;
         }).length !== 0) {
             err.id = true;
             status = false;
         }
-        if (storage.queryUser((usr) => {
+        if (!user.phone.match(/[1-9][0-9]{10}/) || storage.queryUser((usr) => {
             return usr.phone === user.phone;
         }).length !== 0) {
             err.phone = true;
             status = false;
         }
-        if (storage.queryUser((usr) => {
+        if (!user.email.match(/^[a-zA-Z_\-]+@(([a-zA-Z_\-])+\.)+[a-zA-Z]{2,4}$/) || storage.queryUser((usr) => {
             return usr.email === user.email;
         }).length !== 0) {
             err.email = true;
@@ -184,10 +184,8 @@ http.createServer(function (req, res) {
                     res.end("Login fail.");
                 }
             } else {
-                fs.readFile("register/register.html", (err, data) => {
-                    res.writeHead(400, { 'Content-Type': 'text/plain' });
-                    res.end("Bad request.");
-                });
+                res.writeHead(400, { 'Content-Type': 'text/plain' });
+                res.end("Bad request.");
             }
         } else {
             var get_user;
