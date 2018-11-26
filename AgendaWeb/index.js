@@ -114,7 +114,7 @@ function checkData(login) {
 			status = false;
 			$("#reg-phone").addClass("invalid");
         }
-        if ($("#reg-email").val().match(/^[a-zA-Z_\-]+@(([a-zA-Z_\-])+\.)+[a-zA-Z]{2,4}$/)) {
+        if (!$("#reg-email").val().match(/^[a-zA-Z_\-]+@(([a-zA-Z_\-])+\.)+[a-zA-Z]{2,4}$/)) {
 			status = false;
 			$("#reg-email").addClass("invalid");
 		}
