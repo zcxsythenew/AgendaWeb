@@ -265,3 +265,5 @@ http.createServer(function (req, res) {
         }
     });
 }).listen(port);
+
+console.log("Server running at localhost:8000.\nPress Ctrl + C to quit the server.");
